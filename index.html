@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - Playet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="player-container">
+        <!-- Обложка альбома -->
+        <div class="album-cover">
+            <img id="albumImage" src="photo_2025-09-16_21-53-29.jpg" alt="Album Cover">
+        </div>
+
+        <!-- Информация о треке -->
+        <div class="track-info">
+            <h1 id="trackTitle">Название трека</h1>
+            <h2 id="artistName">Исполнитель</h2>
+        </div>
+
+        <!-- Элементы управления плеером -->
+        <div class="player-controls">
+            <button id="prevBtn" class="control-btn">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button id="playPauseBtn" class="control-btn play-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="nextBtn" class="control-btn">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
+
+        <!-- Прогресс бар -->
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+                <input type="range" id="progressSlider" min="0" max="100" value="0" class="slider">
+            </div>
+            <span id="duration">3:45</span>
+        </div>
+
+        <!-- Текст песни -->
+        <div class="lyrics-section">
+            <div id="lyricsContainer" class="lyrics-container">
+                <div class="lyrics-line" data-time="0">Загрузка текста...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Аудио элемент -->
+    <audio id="audioPlayer" preload="metadata">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
